@@ -8,4 +8,5 @@ ENV APP_ROOT /app
 RUN mkdir ${APP_ROOT}
 WORKDIR ${APP_ROOT}
 COPY target/*.jar ${APP_ROOT}/run.jar
+# EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "run.jar"]
